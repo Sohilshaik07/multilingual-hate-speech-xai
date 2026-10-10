@@ -1,0 +1,55 @@
+# ============================================================
+# Git ignore configuration for Team6_XAI
+# Prevents large checkpoints (>100MB) from being committed
+# Checkpoints are hosted on Hugging Face Hub:
+# - sohilshaik07/team6-mbert-hecm
+# - sohilshaik07/team6-mbert-tamil
+# - sohilshaik07/team6-mbert-malayalam
+# ============================================================
+
+# Model weights & training states (>100MB limit on GitHub)
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.pkl
+results/modeling/**/model.safetensors
+
+# Archives and historical zip backups
+*.zip
+*.tar.gz
+Team6_XAI_validated_artifacts.zip
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.cache/
+.streamlit/.cache/
+
+# Credentials, tokens, and environments
+.env
+.env.*
+secrets.toml
+*.token
+*.key
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+
+# Large validated artifact bundles
+Team6_XAI_validated_artifacts.zip
+
+# Backup files
+*.bak
+*.bak.*
+
+# Python and test caches
+.pytest_cache/
+__pycache__/
+
+

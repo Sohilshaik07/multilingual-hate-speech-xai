@@ -1,0 +1,44 @@
+{
+  "language": "Tamil",
+  "model": "mBERT",
+  "checkpoint": "/content/drive/MyDrive/Team6_XAI/results/modeling/mbert_tamil/checkpoint-3844",
+  "audit": {
+    "n_examples": 100,
+    "seed": 42,
+    "truncation_safe": true,
+    "model_max_length": 128,
+    "aligned_model_visible_text": true
+  },
+  "attention": {
+    "top_vs_random_p": 0.6208540604434849,
+    "top_vs_bottom_p": 0.9443014012924735
+  },
+  "shap": {
+    "top_mean_confidence_drop": 0.037603954374790194,
+    "top_median_confidence_drop": 0.0036212801933288574,
+    "top_prediction_change_rate": 0.18,
+    "bottom_mean_confidence_drop": -0.035642695426940915,
+    "bottom_median_confidence_drop": -0.003442913293838501,
+    "bottom_prediction_change_rate": 0.05,
+    "random_mean_confidence_drop": -0.013628833889961244,
+    "random_median_confidence_drop": -0.0006109178066253662,
+    "random_prediction_change_rate": 0.04,
+    "top_vs_random_statistic": 3227.0,
+    "top_vs_random_p": 0.00021976867506559092,
+    "top_vs_bottom_statistic": 3869.0,
+    "top_vs_bottom_p": 5.7094311918732e-07,
+    "top_greater_than_random": 0.65,
+    "top_greater_than_bottom": 0.74
+  },
+  "attention_shap_agreement": {
+    "top_word_agreement": 0.18,
+    "top_word_agreement_count": 18,
+    "n_examples": 100,
+    "mean_spearman_rho": 0.18578317157405608,
+    "median_spearman_rho": 0.2110725365637465,
+    "std_spearman_rho": 0.38381263394528997,
+    "positive_rho_rate": 0.63,
+    "negative_rho_rate": 0.35,
+    "near_zero_rho_rate": 0.17
+  }
+}

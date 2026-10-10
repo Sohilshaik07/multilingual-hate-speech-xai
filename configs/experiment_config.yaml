@@ -1,0 +1,143 @@
+# experiment_config.yaml
+#
+# Central configuration for the Team6_XAI project.
+# Faithfulness-Aware Explainability Audit of Multilingual Transformer Models
+# for Code-Mixed Hate Speech Detection.
+#
+# NOTE: Validated experimental metric values (accuracy, F1, ECE, p-values, etc.)
+# are stored in result CSV/JSON artifacts, NOT in this file.
+# This file contains only structural configuration.
+
+# ============================================================
+# GENERAL
+# ============================================================
+project_name: "Faithfulness-Aware Explainability Audit of Multilingual Transformer Models for Code-Mixed Hate Speech Detection"
+seed: 42
+
+# ============================================================
+# MODELS
+# ============================================================
+models:
+  final_selected: "mBERT"
+
+  mBERT:
+    hub_id: "bert-base-multilingual-cased"
+    max_seq_length: 128
+    eval_batch_size: 32
+
+  XLM-R:
+    hub_id: "xlm-roberta-base"
+    note: "Evaluated on Tamil validation only; not final selected model."
+
+  IndicBERT:
+    hub_id: "ai4bharat/indic-bert"
+    note: "Evaluated on Tamil validation only; not final selected model."
+
+# ============================================================
+# DATASETS
+# ============================================================
+datasets:
+  hecm:
+    language_pair: "Hindi-English"
+    text_file: "datasets/Hindi/HECM.txt"
+    class_file: "datasets/Hindi/HECM_Class.txt"
+    total_rows: 9357
+    label_type: "binary_string"   # raw string '0' and '1'
+    num_labels: 2
+
+  tamil:
+    language_pair: "Tamil-English"
+    train_file: "datasets/TAMIL/train.csv"
+    dev_file: "datasets/TAMIL/dev.csv"
+    test_file: "datasets/TAMIL/test.csv"
+    total_rows: 43919
+    label_type: "integer_0_to_5"
+    num_labels: 6
+
+  malayalam:
+    language_pair: "Malayalam-English"
+    train_file: "datasets/MALAYALAM/train.csv"
+    dev_file: "datasets/MALAYALAM/dev.csv"
+    test_file: "datasets/MALAYALAM/test.csv"
+    file_format: "tsv_no_header"
+    total_rows: 20010
+    label_type: "categorical_string"
+    num_labels: 5
+
+# ============================================================
+# LEAKAGE-SAFE SPLITS
+# Split artifacts were created in the Colab environment with seed=42.
+# DO NOT recreate or overwrite these splits.
+# ============================================================
+splits:
+  seed: 42
+  hecm:
+    artifact: "results/modeling/splits/hecm_split_seed42.json"
+    expected_test_size: 1398
+    status: "external_colab_artifact"
+  tamil:
+    artifact: "results/modeling/splits/tamil_split_seed42.json"
+    expected_test_size: 6584
+    status: "external_colab_artifact"
+  malayalam:
+    artifact: "results/modeling/splits/malayalam_split_seed42.json"
+    expected_test_size: 2997
+    status: "external_colab_artifact"
+
+# ============================================================
+# FINAL CHECKPOINTS
+# Checkpoints were trained in Colab. DO NOT retrain.
+# Status: external_colab_artifact — not yet transferred locally.
+# ============================================================
+checkpoints:
+  hecm:
+    path: "results/modeling/mbert_hecm/checkpoint-824"
+    checkpoint_step: 824
+    status: "external_colab_artifact"
+  tamil:
+    path: "results/modeling/mbert_tamil/checkpoint-3844"
+    checkpoint_step: 3844
+    status: "external_colab_artifact"
+  malayalam:
+    path: "results/modeling/mbert_malayalam/checkpoint-1756"
+    checkpoint_step: 1756
+    status: "external_colab_artifact"
+
+# ============================================================
+# XAI AUDIT PARAMETERS
+# ============================================================
+xai:
+  shap_version: "0.52.0"
+  audit_sample_size: 100      # Fixed sample size per language audit
+  audit_sample_seed: 42
+  deletion_protocol: "top_tokens_removed"
+
+  attention:
+    layer: "last"             # To be confirmed from Colab implementation
+
+# ============================================================
+# RESULT ARTIFACT LOCATIONS
+# Status: external_colab_artifact — not yet transferred locally.
+# ============================================================
+result_artifacts:
+  calibration_csv:         "results/calibration/calibration_results.csv"
+  formatting_robustness_csv: "results/robustness/formatting_robustness_results.csv"
+  script_composition_csv:  "results/robustness/script_composition_per_class_metrics.csv"
+  master_results_csv:      "results/final/master_experimental_results.csv"
+
+# ============================================================
+# SOFTWARE ENVIRONMENT
+# Recorded from the Colab training/evaluation environment.
+# Exact minor versions to be confirmed from Colab pip freeze.
+# ============================================================
+environment:
+  python: "3.x"             # To be confirmed
+  transformers: "4.x"       # To be confirmed
+  torch: "2.x"              # To be confirmed
+  shap: "0.52.0"
+  pandas: "1.x or 2.x"      # To be confirmed
+  numpy: "1.x"              # To be confirmed
+  scikit_learn: "1.x"       # To be confirmed
+  scipy: "1.x"              # To be confirmed
+  matplotlib: "3.x"         # To be confirmed
+  seaborn: "0.x"            # To be confirmed

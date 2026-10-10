@@ -1,0 +1,14 @@
+Feature,Definition,Purpose
+character_count,Total number of characters in raw/preprocessed text,Text length analysis
+word_count,Total space-separated words/tokens in text,Token density and document length
+sentence_count,Estimated sentence count based on delimiters (.!?|।),Structural complexity
+average_word_length,Ratio of character count to word count,Vocabulary complexity
+digit_count,Count of numeric characters,Presence of numbers/years/counts
+punctuation_count,Count of ASCII and native punctuation marks,Syntactic noise and style
+uppercase_ratio,Ratio of uppercase Latin letters to total letters,Emphasis/shouting detection
+english_character_count,"Count of Latin script alphabetic characters (A-Z, a-z)",English/Roman script density
+native_script_character_count,Count of native Indic script characters (Devanagari/Tamil/Malayalam),Native script density
+english_ratio,Ratio of English characters to total script characters,Proportion of Latin script
+native_script_ratio,Ratio of native script characters to total script characters,Proportion of native script
+language_switch_count,Number of transitions between English script and native script,Script-level switching rate
+script_code_mixing_ratio,"min(English, Native) / (English + Native)",Script-level co-occurrence of code-mixing (Note: Underestimates Latin-transliterated regional text)

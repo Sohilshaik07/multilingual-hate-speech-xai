@@ -1,0 +1,67 @@
+# requirements.txt
+#
+# Dependencies for the Team6_XAI project:
+# Faithfulness-Aware Explainability Audit of Multilingual Transformer Models
+# for Code-Mixed Hate Speech Detection.
+#
+# IMPORTANT:
+# Exact package versions below are based ONLY on what is identifiable from the
+# existing local source files (src/data/preprocessing.py,
+# src/data/feature_engineering.py, run_review1.py, notebooks/).
+#
+# The training, XAI, and calibration environments ran in Google Colab.
+# Exact pinned versions for those components (transformers, torch, shap, etc.)
+# must be recovered from a `pip freeze` export from the Colab session.
+# Until then, package names are listed unpinned or with a minimum version
+# constraint where clearly identifiable.
+#
+# TODO: Replace unpinned entries with exact versions from Colab pip freeze.
+
+# ============================================================
+# Core data and numerical computing
+# (identifiable from src/ and run_review1.py)
+# ============================================================
+pandas
+numpy
+
+# ============================================================
+# Visualization
+# (identifiable from run_review1.py)
+# ============================================================
+matplotlib
+seaborn
+
+# ============================================================
+# Machine learning — Transformers stack
+# (required for fine-tuning, inference, SHAP, attention)
+# Versions to be pinned from Colab pip freeze.
+# ============================================================
+torch
+transformers
+datasets                  # HuggingFace datasets library
+accelerate                # Required by transformers Trainer
+
+# ============================================================
+# Explainability
+# SHAP version 0.52.0 is confirmed from Colab environment.
+# ============================================================
+shap==0.52.0
+
+# ============================================================
+# Statistical testing
+# (required for Wilcoxon / Mann-Whitney p-value computation in XAI audit)
+# ============================================================
+scipy
+scikit-learn
+
+# ============================================================
+# Configuration
+# (required for configs/experiment_config.yaml)
+# ============================================================
+pyyaml
+
+# ============================================================
+# Notebook support
+# ============================================================
+jupyter
+ipywidgets

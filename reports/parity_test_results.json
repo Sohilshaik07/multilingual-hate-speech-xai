@@ -1,0 +1,35 @@
+{
+  "hecm": {
+    "local_id": "C:\\Users\\SKSOH\\OneDrive\\Desktop\\Team6_XAI\\results\\modeling\\mbert_hecm\\checkpoint-824",
+    "hf_repo": "sohilshaik07/team6-mbert-hecm",
+    "max_abs_diff": 0.0,
+    "per_input_max_diffs": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pass": true
+  },
+  "tamil": {
+    "local_id": "C:\\Users\\SKSOH\\OneDrive\\Desktop\\Team6_XAI\\results\\modeling\\mbert_tamil\\checkpoint-3844",
+    "hf_repo": "sohilshaik07/team6-mbert-tamil",
+    "max_abs_diff": 0.0,
+    "per_input_max_diffs": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pass": true
+  },
+  "malayalam": {
+    "local_id": "C:\\Users\\SKSOH\\OneDrive\\Desktop\\Team6_XAI\\results\\modeling\\mbert_malayalam\\checkpoint-1756",
+    "hf_repo": "sohilshaik07/team6-mbert-malayalam",
+    "max_abs_diff": 0.0,
+    "per_input_max_diffs": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pass": true
+  }
+}

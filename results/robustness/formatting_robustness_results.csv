@@ -1,0 +1,9 @@
+Language,Perturbation,N_Changed,Prediction_Consistency,Prediction_Flip_Rate,Mean_Confidence_Change,Mean_Absolute_Confidence_Change,Median_Absolute_Confidence_Change
+HECM,Whitespace,5,1.0,0.0,-2.3841858e-08,2.3841858e-08,0.0
+HECM,PunctuationSpacing,266,1.0,0.0,6.498251e-09,4.3695135e-08,0.0
+Tamil,Whitespace,103,1.0,0.0,2.2279407e-08,9.172171e-08,0.0
+Tamil,PunctuationSpacing,191,1.0,0.0,-5.7732246e-09,1.5306847e-07,0.0
+Tamil,RedundantSpacing,102,1.0,0.0,2.1329113e-08,9.145222e-08,0.0
+Malayalam,Whitespace,140,1.0,0.0,-2.1287374e-09,1.0643687e-08,0.0
+Malayalam,PunctuationSpacing,190,1.0,0.0,1.7881394e-08,4.7997425e-08,0.0
+Malayalam,RedundantSpacing,140,1.0,0.0,-2.1287374e-09,1.0643687e-08,0.0

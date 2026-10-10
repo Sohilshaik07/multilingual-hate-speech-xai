@@ -1,0 +1,36 @@
+Dataset,Split,Label,Count,Percentage
+HECM Hindi-English,full,0,2823,30.17
+HECM Hindi-English,full,1,6534,69.83
+Tamil-English,train,0,25425,72.36
+Tamil-English,train,1,1454,4.14
+Tamil-English,train,2,454,1.29
+Tamil-English,train,3,2557,7.28
+Tamil-English,train,4,2906,8.27
+Tamil-English,train,5,2343,6.67
+Tamil-English,dev,0,3193,72.77
+Tamil-English,dev,1,172,3.92
+Tamil-English,dev,2,65,1.48
+Tamil-English,dev,3,295,6.72
+Tamil-English,dev,4,356,8.11
+Tamil-English,dev,5,307,7.0
+Tamil-English,test,0,3190,72.63
+Tamil-English,test,1,160,3.64
+Tamil-English,test,2,71,1.62
+Tamil-English,test,3,288,6.56
+Tamil-English,test,4,368,8.38
+Tamil-English,test,5,315,7.17
+Malayalam-English,train,Not_offensive,14153,88.4
+Malayalam-English,train,not-malayalam,1287,8.04
+Malayalam-English,train,Offensive_Targeted_Insult_Individual,239,1.49
+Malayalam-English,train,Offensive_Untargetede,191,1.19
+Malayalam-English,train,Offensive_Targeted_Insult_Group,140,0.87
+Malayalam-English,dev,Not_offensive,1779,88.99
+Malayalam-English,dev,not-malayalam,163,8.15
+Malayalam-English,dev,Offensive_Targeted_Insult_Individual,24,1.2
+Malayalam-English,dev,Offensive_Untargetede,20,1.0
+Malayalam-English,dev,Offensive_Targeted_Insult_Group,13,0.65
+Malayalam-English,test,Not_offensive,1765,88.21
+Malayalam-English,test,not-malayalam,157,7.85
+Malayalam-English,test,Offensive_Untargetede,29,1.45
+Malayalam-English,test,Offensive_Targeted_Insult_Individual,27,1.35
+Malayalam-English,test,Offensive_Targeted_Insult_Group,23,1.15

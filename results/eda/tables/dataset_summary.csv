@@ -1,0 +1,4 @@
+Dataset,Language Pair,Train,Dev,Test,Total
+HECM Hindi-English,Hindi-English,9357,0,0,9357
+Tamil-English,Tamil-English,35139,4388,4392,43919
+Malayalam-English,Malayalam-English,16010,1999,2001,20010

@@ -1,0 +1,174 @@
+{
+  "overall_passed": true,
+  "tolerance": 0.0001,
+  "results": {
+    "HECM": {
+      "Accuracy": {
+        "actual": 0.814735,
+        "target": 0.814735,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Macro-F1": {
+        "actual": 0.769557,
+        "target": 0.769557,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Weighted-F1": {
+        "actual": 0.81014,
+        "target": 0.81014,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "ECE": {
+        "actual": 0.0712837260509594,
+        "target": 0.071284,
+        "diff": 2.739490406050704e-07,
+        "status": "PASS"
+      },
+      "Brier": {
+        "actual": 0.2827099386727052,
+        "target": 0.28271,
+        "diff": 6.132729479801924e-08,
+        "status": "PASS"
+      },
+      "Top_Word_Agreement": {
+        "actual": 0.23,
+        "target": 0.23,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Mixed_Script_N": {
+        "actual": 76.0,
+        "target": 76.0,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Mixed_Script_Accuracy": {
+        "actual": 0.815789,
+        "target": 0.815789,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Mixed_Script_Macro_F1": {
+        "actual": 0.675214,
+        "target": 0.675214,
+        "diff": 0.0,
+        "status": "PASS"
+      }
+    },
+    "Tamil": {
+      "Accuracy": {
+        "actual": 0.710055,
+        "target": 0.710055,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Macro-F1": {
+        "actual": 0.469392,
+        "target": 0.469392,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Weighted-F1": {
+        "actual": 0.73116,
+        "target": 0.73116,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "ECE": {
+        "actual": 0.066789800661049,
+        "target": 0.06679,
+        "diff": 1.9933895099855103e-07,
+        "status": "PASS"
+      },
+      "Brier": {
+        "actual": 0.3935454470912863,
+        "target": 0.393545,
+        "diff": 4.470912863263621e-07,
+        "status": "PASS"
+      },
+      "Top_Word_Agreement": {
+        "actual": 0.18,
+        "target": 0.18,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Mixed_Script_N": {
+        "actual": 273.0,
+        "target": 273.0,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Mixed_Script_Accuracy": {
+        "actual": 0.739927,
+        "target": 0.739927,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Mixed_Script_Macro_F1": {
+        "actual": 0.452456,
+        "target": 0.452456,
+        "diff": 0.0,
+        "status": "PASS"
+      }
+    },
+    "Malayalam": {
+      "Accuracy": {
+        "actual": 0.918919,
+        "target": 0.918919,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Macro-F1": {
+        "actual": 0.450386,
+        "target": 0.450386,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Weighted-F1": {
+        "actual": 0.908449,
+        "target": 0.908449,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "ECE": {
+        "actual": 0.0658625324925145,
+        "target": 0.065863,
+        "diff": 4.675074855020611e-07,
+        "status": "PASS"
+      },
+      "Brier": {
+        "actual": 0.146695904004988,
+        "target": 0.146696,
+        "diff": 9.599501199497595e-08,
+        "status": "PASS"
+      },
+      "Top_Word_Agreement": {
+        "actual": 0.26,
+        "target": 0.26,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Mixed_Script_N": {
+        "actual": 413.0,
+        "target": 413.0,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Mixed_Script_Accuracy": {
+        "actual": 0.961259,
+        "target": 0.961259,
+        "diff": 0.0,
+        "status": "PASS"
+      },
+      "Mixed_Script_Macro_F1": {
+        "actual": 0.335658,
+        "target": 0.335658,
+        "diff": 0.0,
+        "status": "PASS"
+      }
+    }
+  }
+}

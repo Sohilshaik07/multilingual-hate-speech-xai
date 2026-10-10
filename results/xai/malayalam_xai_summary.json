@@ -1,0 +1,31 @@
+{
+  "language": "Malayalam",
+  "model": "mBERT",
+  "checkpoint": "/content/drive/MyDrive/Team6_XAI/results/modeling/mbert_malayalam/checkpoint-1756",
+  "audit_examples": 100,
+  "attention": {
+    "mean_confidence_drop": 0.037991,
+    "median_confidence_drop": 6.1e-05,
+    "prediction_change_rate": 0.06,
+    "top_vs_random_wilcoxon_p": 0.0797194062497985,
+    "top_vs_bottom_wilcoxon_p": 0.037824521490097754
+  },
+  "shap": {
+    "mean_confidence_drop": 0.065766,
+    "median_confidence_drop": 8.3e-05,
+    "prediction_change_rate": 0.08,
+    "top_vs_random_percentage": 0.57,
+    "top_vs_bottom_percentage": 0.63,
+    "top_vs_random_wilcoxon_p": 0.000245428694767732,
+    "top_vs_bottom_wilcoxon_p": 0.00017918247068552642
+  },
+  "attention_vs_shap": {
+    "exact_top_word_agreement": 0.26,
+    "mean_spearman": 0.16770039681707616,
+    "median_spearman": 0.24426605504587157,
+    "std_spearman": 0.3987773167773773,
+    "positive_correlation_rate": 0.71,
+    "negative_correlation_rate": 0.29,
+    "near_zero_correlation_rate": 0.13
+  }
+}

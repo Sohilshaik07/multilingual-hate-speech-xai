@@ -1,0 +1,82 @@
+# configs/reproducibility.yaml
+# Machine-readable reproducibility configuration for Team6_XAI
+
+project:
+  name: "Faithfulness-Aware Explainability Audit of Multilingual Transformer Models for Code-Mixed Hate Speech Detection"
+  institution: "Team 6 Final-Year Research Project"
+  authoritative_environment: "Google Colab (NVIDIA T4 / A100 GPU)"
+  local_environment_mode: "Inference, Methodology Reproduction, and Verification Only"
+
+parameters:
+  random_seed: 42
+  max_sequence_length: 128
+  special_tokens_reserved: 2
+  content_tokens_max: 126
+  evaluation_batch_size: 32
+  xai_audit_sample_size: 100
+
+models:
+  foundation_model: "bert-base-multilingual-cased"
+  architecture: "BertForSequenceClassification"
+  hecm:
+    checkpoint_path: "results/modeling/mbert_hecm/checkpoint-824"
+    num_labels: 2
+    label_schema: "binary_string"
+    classes: ["0", "1"]
+    expected_test_samples: 1398
+  tamil:
+    checkpoint_path: "results/modeling/mbert_tamil/checkpoint-3844"
+    num_labels: 6
+    label_schema: "integer_0_to_5"
+    classes: [0, 1, 2, 3, 4, 5]
+    expected_test_samples: 6584
+  malayalam:
+    checkpoint_path: "results/modeling/mbert_malayalam/checkpoint-1756"
+    num_labels: 5
+    label_schema: "categorical_string"
+    classes:
+      - "Not_offensive"
+      - "not-malayalam"
+      - "Offensive_Targeted_Insult_Individual"
+      - "Offensive_Untargetede"
+      - "Offensive_Targeted_Insult_Group"
+    expected_test_samples: 2997
+
+splits:
+  strategy: "text_group_aware_stratified_split"
+  seed: 42
+  ratios:
+    train: 0.70
+    validation: 0.15
+    test: 0.15
+  hecm_artifact: "results/modeling/splits/hecm_split_seed42.json"
+  tamil_artifact: "results/modeling/splits/tamil_split_seed42.json"
+  malayalam_artifact: "results/modeling/splits/malayalam_split_seed42.json"
+
+authoritative_targets:
+  hecm:
+    accuracy: 0.814735
+    macro_f1: 0.769557
+    weighted_f1: 0.810140
+    ece: 0.071284
+    brier: 0.282710
+  tamil:
+    accuracy: 0.710055
+    macro_f1: 0.469392
+    weighted_f1: 0.731160
+    ece: 0.066790
+    brier: 0.393545
+  malayalam:
+    accuracy: 0.918919
+    macro_f1: 0.450386
+    weighted_f1: 0.908449
+    ece: 0.065863
+    brier: 0.146696
+
+software_versions:
+  established_colab_versions:
+    shap: "0.52.0"
+  local_verification_environment:
+    python: "3.13"
+    torch: "2.11.0+cpu"
+    transformers: "5.15.0"
