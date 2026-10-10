@@ -1,8 +1,5 @@
 # Faithfulness-Aware Explainability Audit of Multilingual Transformer Models for Code-Mixed Hate Speech Detection
 
-**Team 6 — Final-Year Research Project**
-
----
 
 ## 1. Research Objective
 
